@@ -39,9 +39,8 @@ const Dashboard = () => {
     <div className="min-h-screen bg-background pb-24 px-5 pt-6 overflow-y-auto">
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-between mb-6">
-        <div>
-          <p className="text-silver text-xs">Welcome back</p>
-          <h2 className="font-display text-xl font-bold text-foreground">Hello, Sarah! 👋</h2>
+        <div className="flex items-center gap-2">
+          <img src="/edu-liberty-hub/logo.png" alt="Edu Liberty" className="h-8 w-auto object-contain" />
         </div>
         <div className="flex items-center gap-3">
           <div className="text-right">

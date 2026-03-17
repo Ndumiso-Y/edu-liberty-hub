@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GraduationCap, Trophy, Heart } from "lucide-react";
+import GenerativeMountainScene from "./GenerativeMountainScene";
 
 const slides = [
   {
@@ -46,8 +47,18 @@ const Onboarding = ({ onComplete }: OnboardingProps) => {
 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-background overflow-hidden">
+      <GenerativeMountainScene />
       {/* Gold ambient glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full opacity-20 blur-[100px]" style={{ background: "hsl(47, 91%, 52%)" }} />
+
+      {/* Brand Logo */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="absolute top-12 left-1/2 -translate-x-1/2 z-10"
+      >
+        <img src="/edu-liberty-hub/logo.png" alt="Edu Liberty" className="h-10 w-auto object-contain" />
+      </motion.div>
 
       <AnimatePresence mode="wait">
         <motion.div
